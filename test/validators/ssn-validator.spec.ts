@@ -14,4 +14,11 @@ describe('SsnValidator: ', function () {
     expect(SsnValidator.validate('01026847822')).toBe(true);
     expect(SsnValidator.validate('01026849590')).toBe(true);
   });
+
+  it('validate() should succeed for valid d-number', function () {
+    expect(SsnValidator.validate('41016508878')).toBe(true);
+    expect(SsnValidator.validate('50015902660')).toBe(true);
+    expect(SsnValidator.validate('60017407247')).toBe(true);
+    expect(SsnValidator.validate('70015101871')).toBe(true);
+  });
 });
