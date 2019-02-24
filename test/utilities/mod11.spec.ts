@@ -1,6 +1,6 @@
 import { Mod11 } from '@utilities/mod11';
 
-describe('mod11', function() {
+describe('Mod11: ', function() {
 
   it('getControlDigit() should create correct control digit', function () {
     let values = [
@@ -39,7 +39,7 @@ describe('mod11', function() {
 
   });
 
-  it('checkControlDigit() should validate control digit', function () {
+  it('checkControlDigit() should validate the last control digit', function () {
     let values = [
       {input: '51028745501', expectedOutput: true},
       {input: '51028745502', expectedOutput: false},
@@ -62,7 +62,7 @@ describe('mod11', function() {
 
   });
 
-  it('checkControlDigits() should validate control digits', function () {
+  it('checkControlDigits() should validate the given number of control digits', function () {
     let values = [
       {input: '01028745539454', numberOfDigits: 4, expectedOutput: true},
       {input: '51028745502', numberOfDigits: 3, expectedOutput: false},
