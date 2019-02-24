@@ -1,6 +1,6 @@
-import { Luhn } from '@utilities/luhn';
+import { LuhnUtilities } from '@utilities/luhn-utilities';
 
-describe('Luhn: ', function() {
+describe('LuhnUtilities: ', function() {
   it('getControlDigit() should create correct control digit', function () {
     let values = [
       {input: '5102874550', expectedOutput: 6},
@@ -12,7 +12,7 @@ describe('Luhn: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Luhn.getControlDigit(v.input);
+      let output = LuhnUtilities.getControlDigit(v.input);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -31,7 +31,7 @@ describe('Luhn: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Luhn.getControlDigits(v.input, v.numberOfDigits);
+      let output = LuhnUtilities.getControlDigits(v.input, v.numberOfDigits);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -54,7 +54,7 @@ describe('Luhn: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Luhn.checkControlDigit(v.input);
+      let output = LuhnUtilities.checkControlDigit(v.input);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -82,7 +82,7 @@ describe('Luhn: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Luhn.checkControlDigits(v.input, v.numberOfDigits);
+      let output = LuhnUtilities.checkControlDigits(v.input, v.numberOfDigits);
       expect(output).toEqual(v.expectedOutput);
     });
 

@@ -1,4 +1,4 @@
-export class Mod11 {
+export class Mod11Utilities {
   public static getControlDigit( input: string ): number|null {
     let weightNumber = 2;
     let modSum = 0;
@@ -30,7 +30,7 @@ export class Mod11 {
   public static getControlDigits( input: string, numberOfDigits: number ): (number|null)[] {
     const controlDigits = [];
     for (let i = numberOfDigits; i > 0; i--) {
-      let c = Mod11.getControlDigit(input);
+      let c = Mod11Utilities.getControlDigit(input);
       controlDigits.push(c);
       input += null === c ? '-' : c.toString();
     }
@@ -39,12 +39,12 @@ export class Mod11 {
   }
 
   public static checkControlDigit( input: string ): boolean {
-    return parseInt(input.charAt(input.length - 1), 10) === Mod11.getControlDigit(input.substr(0, input.length - 1));
+    return parseInt(input.charAt(input.length - 1), 10) === Mod11Utilities.getControlDigit(input.substr(0, input.length - 1));
   }
 
   public static checkControlDigits( input: string, numberOfDigits: number ): boolean {
     for (let i = numberOfDigits; i > 0; i--) {
-      if (!Mod11.checkControlDigit(input)) {
+      if (!Mod11Utilities.checkControlDigit(input)) {
         return false;
       }
 

@@ -1,4 +1,4 @@
-export class Luhn {
+export class LuhnUtilities {
   public static getControlDigit( input: string ): number {
     let sum = 0;
     for (let i = input.length - 1; i >=0; i -= 2) {
@@ -16,7 +16,7 @@ export class Luhn {
     const controlDigits: number[] = [];
 
     for (let i = numberOfDigits; i > 0; i--) {
-      let c = Luhn.getControlDigit(input);
+      let c = LuhnUtilities.getControlDigit(input);
       controlDigits.push(c);
       input += c.toString();
     }
@@ -25,13 +25,13 @@ export class Luhn {
   }
 
   public static checkControlDigit( input: string ): boolean {
-    const c = Luhn.getControlDigit(input.substr(0, input.length - 1));
+    const c = LuhnUtilities.getControlDigit(input.substr(0, input.length - 1));
     return c === parseInt(input.charAt(input.length -1), 10);
   }
 
   public static checkControlDigits( input: string, numberOfDigits: number ): boolean {
     for (let i = numberOfDigits - 1; i >= 0; i--) {
-      if (!Luhn.checkControlDigit(input.substr(0, input.length - i))) {
+      if (!LuhnUtilities.checkControlDigit(input.substr(0, input.length - i))) {
         return false;
       }
     }

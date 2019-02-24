@@ -1,6 +1,6 @@
-import { Mod11 } from '@utilities/mod11';
+import { Mod11Utilities } from '@utilities/mod11-utilities';
 
-export class Ssn {
+export class SsnValidator {
   public static validate( ssn: string ): boolean {
     if ( !ssn || ssn.length !== 11 ) {
       return false;
@@ -19,7 +19,7 @@ export class Ssn {
       controlDigit1 = 0;
     }
 
-    let controlDigit2 = Mod11.getControlDigit(ssn.substr(0, ssn.length - 1));
+    let controlDigit2 = Mod11Utilities.getControlDigit(ssn.substr(0, ssn.length - 1));
 
     return controlDigit1 === parseInt( ssn.charAt( 9 ), 10 )
            && controlDigit2 === parseInt( ssn.charAt( 10 ), 10 );

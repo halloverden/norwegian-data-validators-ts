@@ -1,6 +1,6 @@
-import { Mod11 } from '@utilities/mod11';
+import { Mod11Utilities } from '@utilities/mod11-utilities';
 
-describe('Mod11: ', function() {
+describe('Mod11Utilities: ', function() {
 
   it('getControlDigit() should create correct control digit', function () {
     let values = [
@@ -14,7 +14,7 @@ describe('Mod11: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Mod11.getControlDigit(v.input);
+      let output = Mod11Utilities.getControlDigit(v.input);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -33,7 +33,7 @@ describe('Mod11: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Mod11.getControlDigits(v.input, v.numberOfDigits);
+      let output = Mod11Utilities.getControlDigits(v.input, v.numberOfDigits);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -56,7 +56,7 @@ describe('Mod11: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Mod11.checkControlDigit(v.input);
+      let output = Mod11Utilities.checkControlDigit(v.input);
       expect(output).toEqual(v.expectedOutput);
     });
 
@@ -77,7 +77,7 @@ describe('Mod11: ', function() {
     ];
 
     values.forEach((v) => {
-      let output = Mod11.checkControlDigits(v.input, v.numberOfDigits);
+      let output = Mod11Utilities.checkControlDigits(v.input, v.numberOfDigits);
       expect(output).toEqual(v.expectedOutput);
     });
 
