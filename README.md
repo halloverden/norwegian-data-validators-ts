@@ -11,4 +11,4 @@ Test with `npm run test`
 
 Build with `npm run build`
 
-Install with `npm -i --save halloverden/norwegian-data-validators-ts`
+Install with `npm i --save @halloverden/norwegian-data-validators-ts`
