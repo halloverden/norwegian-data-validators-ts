@@ -1,6 +1,6 @@
-# norwegian-data-validator-js
+# norwegian-data-validator-ts
 
-Javascript library for validating norwegian data:
+Typescript library for validating norwegian data:
 - Account numbers
 - Organization numbers
 - Social security numbers
