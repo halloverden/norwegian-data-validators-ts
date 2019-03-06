@@ -24,6 +24,7 @@
     "@types/karma-coverage": "^1.1.0",
     "@types/node": "~11.9.5",
     "awesome-typescript-loader": "^5.2.1",
+    "clean-webpack-plugin": "^2.0.0",
     "core-js": "^2.6.5",
     "istanbul": "^0.4.5",
     "jasmine-core": "^3.2.1",
