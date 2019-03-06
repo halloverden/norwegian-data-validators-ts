@@ -1,18 +1,25 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "declaration": true,
-    "module": "commonjs",
     "outDir": "./dist",
-    "sourceMap": true,
-    "strict": true,
+    "moduleResolution": "node",
+    "module": "esnext",
     "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "declaration": true,
+    "noImplicitAny": true,
+    "removeComments": true,
+    "strict": true,
+    "sourceMap": true,
     "paths": {
       "@utilities/*": ["utilities/*"],
       "@validators/*": ["validators/*"]
     }
   },
   "exclude": [
+    "dist",
     "node_modules"
   ]
 }
