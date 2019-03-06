@@ -23,6 +23,7 @@ module.exports = ( config: any ) => {
       require('karma-coverage'),
       require('karma-chrome-launcher'),
       require('karma-coverage-istanbul-reporter'),
+      require('karma-firefox-launcher'),
       require('karma-jasmine'),
       require('karma-phantomjs-launcher'),
       require('karma-webpack')
@@ -36,7 +37,7 @@ module.exports = ( config: any ) => {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],
+    browsers: ['Chrome', 'Firefox', 'PhantomJS'],
     singleRun: false
   });
 };
