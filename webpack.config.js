@@ -1,10 +1,11 @@
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   target: 'web',
   entry: {
-    app: ['./index.ts']
+    app: ['../index.ts']
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,6 +13,9 @@ module.exports = {
     chunkFilename: 'app-[id].js',
     publicPath: './'
   },
+  plugins: [
+    new CleanWebpackPlugin()
+  ],
   resolve: {
     extensions: ['.ts'],
     modules: [
