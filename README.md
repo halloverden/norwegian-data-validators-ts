@@ -5,3 +5,10 @@ Typescript library for validating norwegian data:
 - Organization numbers
 - Social security numbers
 - KID numbers
+
+
+Test with `npm run test`
+
+Build with `npm run build`
+
+Install with `npm -i --save halloverden/norwegian-data-validators-ts`
