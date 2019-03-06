@@ -1,8 +1,9 @@
 {
   "name": "@halloverden/norwegian-data-validators-ts",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Typescript library for validating norwegian data",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.dev.js",
     "test": "karma start"
