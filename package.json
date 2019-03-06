@@ -1,6 +1,6 @@
 {
-  "name": "norwegian-data-validators-ts",
-  "version": "0.0.1",
+  "name": "@halloverden/norwegian-data-validators-ts",
+  "version": "1.0.0",
   "description": "Typescript library for validating norwegian data",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.halloverden.no:erichfosse/norwegian-data-validator-ts.git"
+    "url": "git@github.com:halloverden/norwegian-data-validators-ts.git"
   },
   "author": "Erich Json Fosse <erich@halloverden.no>",
   "license": "ISC",
