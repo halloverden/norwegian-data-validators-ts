@@ -6,13 +6,18 @@
   "types": "./index.d.ts",
   "scripts": {
     "build": "webpack --progress --colors --config webpack.config.dev.js",
+    "preprod": "yarn && npm i",
     "prod": "webpack --progress --colors --config webpack.config.prod.js",
-    "test": "karma start"
+    "pretest": "rimraf coverage .nyc_output",
+    "test": "cross-env NODE_ENV=test nyc karma start"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:halloverden/norwegian-data-validators-ts.git"
   },
+  "files": [
+    "dist/index.js"
+  ],
   "author": "Erich Json Fosse <erich@halloverden.no>",
   "license": "ISC",
   "dependencies": {},
@@ -21,26 +26,30 @@
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-typescript": "^7.3.3",
+    "@babel/register": "^7.0.0",
     "@types/jasmine": "^3.3.9",
     "@types/karma": "^3.0.2",
     "@types/karma-coverage": "^1.1.0",
     "@types/node": "~11.9.5",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-istanbul": "^5.1.1",
     "clean-webpack-plugin": "^2.0.0",
     "core-js": "^2.6.5",
-    "istanbul": "^0.4.5",
+    "cross-env": "^5.2.0",
     "jasmine-core": "^3.2.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~3.1.0",
+    "karma": "^4.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-cli": "^2.0.0",
-    "karma-coverage-istanbul-reporter": "~2.0.5",
+    "karma-coverage": "^1.1.2",
     "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^2.0.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-typescript": "^4.0.0",
     "karma-webpack": "^4.0.0-rc.6",
+    "nyc": "^13.3.0",
     "path": "^0.12.7",
+    "rimraf": "^2.6.3",
     "ts-node": "~8.0.2",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "~5.12.1",
@@ -48,5 +57,16 @@
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "sourceMap": false,
+    "instrument": false
   }
 }
