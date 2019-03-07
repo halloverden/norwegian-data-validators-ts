@@ -1,4 +1,2 @@
-export declare class SsnUtilities {
-    static getBirthDateFromSsn(ssn: string): Date | null;
-    static isDNumber(ssn: string): boolean | null;
-}
+export declare function getBirthDateFromSsn(ssn: string): Date | null;
+export declare function isDNumber(ssn: string): boolean | null;

@@ -5,8 +5,8 @@ const path = require('path');
 module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
+    filename: 'index.min.js',
     publicPath: './'
   },
-  mode: 'development'
+  mode: 'production'
 });

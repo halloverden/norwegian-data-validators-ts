@@ -3,7 +3,7 @@
     "baseUrl": "./src",
     "outDir": "./dist",
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "es2015",
     "target": "es5",
     "typeRoots": [
       "node_modules/@types"
@@ -14,8 +14,12 @@
     "strict": true,
     "sourceMap": true,
     "paths": {
-      "@utilities/*": ["utilities/*"],
-      "@validators/*": ["validators/*"]
+      "@utilities/*": [
+        "utilities/*"
+      ],
+      "@validators/*": [
+        "validators/*"
+      ]
     }
   },
   "exclude": [

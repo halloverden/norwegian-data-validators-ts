@@ -7,12 +7,6 @@ module.exports = {
   entry: {
     app: ['../index.ts']
   },
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
-    chunkFilename: 'app-[id].js',
-    publicPath: './'
-  },
   plugins: [
     new CleanWebpackPlugin()
   ],
@@ -26,7 +20,6 @@ module.exports = {
     ]
   },
   context: path.resolve(__dirname, 'src'),
-  mode: "development",
   optimization: {
     usedExports: true
   },

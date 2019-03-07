@@ -1,6 +1,4 @@
-export declare class LuhnUtilities {
-    static getControlDigit(input: string): number;
-    static getControlDigits(input: string, numberOfDigits: number): number[];
-    static checkControlDigit(input: string): boolean;
-    static checkControlDigits(input: string, numberOfDigits: number): boolean;
-}
+export declare function getLuhnControlDigit(input: string): number;
+export declare function getLuhnControlDigits(input: string, numberOfDigits: number): number[];
+export declare function checkLuhnControlDigit(input: string): boolean;
+export declare function checkLuhnControlDigits(input: string, numberOfDigits: number): boolean;
