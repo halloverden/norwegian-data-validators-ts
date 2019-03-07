@@ -1,3 +1,1 @@
-export declare class SsnValidator {
-    static validate(ssn: string): boolean;
-}
+export declare function validateSsn(ssn: string): boolean;

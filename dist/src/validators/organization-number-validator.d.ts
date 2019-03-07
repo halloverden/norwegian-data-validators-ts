@@ -1,3 +1,1 @@
-export declare class OrganizationNumberValidator {
-    static validate(orgNumber: string): boolean;
-}
+export declare function validateOrganizationNumber(orgNumber: string): boolean;
