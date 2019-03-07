@@ -1,6 +1,4 @@
-export declare class Mod11Utilities {
-    static getControlDigit(input: string): number | null;
-    static getControlDigits(input: string, numberOfDigits: number): (number | null)[];
-    static checkControlDigit(input: string): boolean;
-    static checkControlDigits(input: string, numberOfDigits: number): boolean;
-}
+export declare function getMod11ControlDigit(input: string): number | null;
+export declare function getMod11ControlDigits(input: string, numberOfDigits: number): (number | null)[];
+export declare function checkMod11ControlDigit(input: string): boolean;
+export declare function checkMod11ControlDigits(input: string, numberOfDigits: number): boolean;
