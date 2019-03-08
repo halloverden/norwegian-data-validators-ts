@@ -12,7 +12,7 @@ module.exports = ( config: any ) => {
       'text/x-typescript': ['ts', 'tsx']
     },
     preprocessors: {
-      'src/**/*.ts': ['webpack', 'coverage'],
+      'src/**/*.ts': ['webpack'],
       'test/**/*.ts': ['webpack']
     },
     frameworks: ['jasmine'],
@@ -22,7 +22,6 @@ module.exports = ( config: any ) => {
     plugins: [
       require('karma-coverage'),
       require('karma-chrome-launcher'),
-      require('karma-coverage-istanbul-reporter'),
       require('karma-firefox-launcher'),
       require('karma-jasmine'),
       require('karma-phantomjs-launcher'),
@@ -30,9 +29,21 @@ module.exports = ( config: any ) => {
     ],
     webpack: webpackConfig,
     client: {
+      captureConsole: true,
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     reporters: ['progress', 'coverage'],
+    coverageReporter: {
+      dir: 'coverage/',
+      reporters: [
+        { type: 'text' },
+        { type: 'text-summary' },
+        { type: 'html' }
+      ],
+      instrumenterOptions: {
+        istanbul: { noCompact: true }
+      }
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
