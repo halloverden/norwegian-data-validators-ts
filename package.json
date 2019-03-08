@@ -15,9 +15,6 @@
     "type": "git",
     "url": "git@github.com:halloverden/norwegian-data-validators-ts.git"
   },
-  "files": [
-    "dist/index.js"
-  ],
   "author": "Erich Json Fosse <erich@halloverden.no>",
   "license": "ISC",
   "dependencies": {},
