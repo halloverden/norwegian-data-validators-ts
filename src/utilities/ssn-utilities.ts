@@ -1,4 +1,67 @@
 import { validateSsn } from '@validators/ssn-validator';
+import { getMod11ControlDigit } from '@utilities/mod11-utilities';
+
+export const ssnFactors = [ 3, 7, 6, 1, 8, 9, 4, 5, 2 ];
+
+export const ssnIndividualNumberMappings = [
+  {
+    fromYear: 1854,
+    toYear: 1899,
+    indStart: 500,
+    indEnd: 749
+  },
+  {
+    fromYear: 1940,
+    toYear: 1999,
+    indStart: 900,
+    indEnd: 999
+  },
+  {
+    fromYear: 1900,
+    toYear: 1999,
+    indStart: 0,
+    indEnd: 499
+  },
+  {
+    fromYear: 2000,
+    toYear: 2039,
+    indStart: 500,
+    indEnd: 999
+  }
+];
+
+export function getIndRangeFromYear( year: number ): {indStart: number, indEnd: number}|null {
+  const validRanges = [];
+
+  for (let i = 0; i < ssnIndividualNumberMappings.length; i++) {
+    if (year >= ssnIndividualNumberMappings[i].fromYear && year <= ssnIndividualNumberMappings[i].toYear) {
+      validRanges.push(ssnIndividualNumberMappings[i]);
+    }
+  }
+
+  if (validRanges.length === 0) {
+    return null;
+  }
+
+  if (validRanges.length === 1) {
+    return {indStart: validRanges[0].indStart, indEnd: validRanges[0].indEnd};
+  }
+
+  let indStart = validRanges[0].indStart;
+  let indEnd = validRanges[0].indEnd;
+
+  for (let j = 1; j < validRanges.length; j++) {
+    if (indStart > validRanges[j].indStart) {
+      indStart = validRanges[j].indStart;
+    }
+    if (indEnd < validRanges[j].indEnd) {
+      indEnd = validRanges[j].indEnd;
+    }
+  }
+
+
+  return {indStart: indStart, indEnd: indEnd};
+}
 
 export function getBirthDateFromSsn( ssn: string ): Date | null {
   if ( !validateSsn( ssn ) ) {
