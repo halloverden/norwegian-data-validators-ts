@@ -29,6 +29,7 @@ module.exports = ( config: any ) => {
     ],
     webpack: webpackConfig,
     client: {
+      captureConsole: true,
       clearContext: false // leave Jasmine Spec Runner output visible in browser
     },
     reporters: ['progress', 'coverage'],
