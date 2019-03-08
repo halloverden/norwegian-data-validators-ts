@@ -77,7 +77,7 @@ export function getBirthDateFromSsn( ssn: string ): Date | null {
   const shortYearInt = parseInt( shortYear, 10 );
   const indInt = parseInt( ssn.substr( 6, 3 ), 10 );
 
-  let birthYear = null;
+  let birthYear = 0;
 
   if ( indInt >= 0 && indInt <= 499 ) {
     birthYear = parseInt( '19' + shortYear, 10 );
@@ -87,8 +87,6 @@ export function getBirthDateFromSsn( ssn: string ): Date | null {
     birthYear = parseInt( '20' + shortYear, 10 );
   } else if ( indInt >= 900 && indInt <= 999 && shortYearInt >= 40 && shortYearInt <= 99 ) {
     birthYear = parseInt( '19' + shortYear, 10 );
-  } else {
-    return null;
   }
 
   const bd = new Date();
