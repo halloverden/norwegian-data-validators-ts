@@ -1,15 +1,15 @@
 import { getMod11ControlDigit } from '@utilities/mod11-utilities';
+import { ssnFactors } from '@utilities/ssn-utilities';
 
 export function validateSsn( ssn: string ): boolean {
   if ( !ssn || ssn.length !== 11 ) {
     return false;
   }
 
-  const factors = [ 3, 7, 6, 1, 8, 9, 4, 5, 2 ];
   let factorSum = 0;
 
-  for ( let i = 0; i < factors.length; i++ ) {
-    factorSum += parseInt( ssn.charAt( i ), 10 ) * factors[ i ];
+  for ( let i = 0; i < ssnFactors.length; i++ ) {
+    factorSum += parseInt( ssn.charAt( i ), 10 ) * ssnFactors[ i ];
   }
 
   let controlDigit1 = 11 - ( factorSum % 11 );
