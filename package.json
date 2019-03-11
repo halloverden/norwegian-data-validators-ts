@@ -1,13 +1,13 @@
 {
   "name": "@halloverden/norwegian-data-validators-ts",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Typescript library for validating norwegian data",
-  "main": "index.js",
-  "types": "./index.d.ts",
+  "main": "./dist/index.min.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "build": "webpack --progress --colors --config webpack.config.dev.js",
-    "preprod": "yarn && npm i",
-    "prod": "webpack --progress --colors --config webpack.config.prod.js",
+    "build": "webpack --progress --colors --config webpack.config.prod.js",
+    "predevbuild": "yarn && npm i",
+    "devbuild": "webpack --progress --colors --config webpack.config.dev.js",
     "pretest": "rimraf coverage .nyc_output",
     "test": "cross-env NODE_ENV=test nyc karma start"
   },
