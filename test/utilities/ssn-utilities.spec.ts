@@ -154,7 +154,7 @@ describe( 'SsnUtilities', function () {
     }
   } );
 
-  it('getSsnForDate() should return a valid ssn for the given date object', function () {
+  it('getSsnForDate() should return a valid ssn or D-number for the given date object', function () {
     const d1 = new Date( 1968, 1, 1, 0, 0, 0, 0 );
     const ssn1 = getSsnForDate(d1);
     const dn1 = getSsnForDate(d1, true);
