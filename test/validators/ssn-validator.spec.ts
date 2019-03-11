@@ -1,4 +1,4 @@
-import { validateSsn } from '@validators/ssn-validator';
+import { validateSsn } from '../../src/validators/ssn-validator';
 
 describe( 'SsnValidator: ', function () {
   it( 'valdate() should fail for input that does not follow the proper pattern for ssn', function () {

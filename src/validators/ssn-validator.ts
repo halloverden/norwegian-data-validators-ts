@@ -1,5 +1,5 @@
-import { getMod11ControlDigit } from '@utilities/mod11-utilities';
-import { ssnFactors } from '@utilities/ssn-utilities';
+import { getMod11ControlDigit } from '../utilities/mod11-utilities';
+import { ssnFactors } from '../utilities/ssn-utilities';
 
 export function validateSsn( ssn: string ): boolean {
   if ( !ssn || ssn.length !== 11 ) {

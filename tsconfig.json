@@ -12,15 +12,7 @@
     "noImplicitAny": true,
     "removeComments": true,
     "strict": true,
-    "sourceMap": true,
-    "paths": {
-      "@utilities/*": [
-        "utilities/*"
-      ],
-      "@validators/*": [
-        "validators/*"
-      ]
-    }
+    "sourceMap": true
   },
   "exclude": [
     "dist",
