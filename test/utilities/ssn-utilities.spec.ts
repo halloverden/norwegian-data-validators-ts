@@ -82,7 +82,7 @@ describe( 'SsnUtilities', function () {
     expect( getBirthDateFromSsn( 'asdf' ) ).toEqual( null );
   } );
 
-  it( 'getBirthDateFromSsn() should return the correct birth date for a given ssn', function () {
+  it( 'getBirthDateFromSsn() should return the correct birth date for a valid ssn or D-number', function () {
     const d1 = getBirthDateFromSsn( '01026849833' );
     const cd1 = new Date( 1968, 1, 1, 0, 0, 0, 0 );
     expect( d1 ).toBeTruthy();
@@ -130,6 +130,27 @@ describe( 'SsnUtilities', function () {
     expect( d7 ).toBeTruthy();
     if ( d7 ) {
       expect( d7.toDateString() ).toEqual( cd7.toDateString() );
+    }
+
+    const d8 = getBirthDateFromSsn( '41038058167' );
+    const cd8 = new Date( 1880, 2, 1, 0, 0, 0, 0 );
+    expect( d8 ).toBeTruthy();
+    if ( d8 ) {
+      expect( d8.toDateString() ).toEqual( cd8.toDateString() );
+    }
+
+    const d9 = getBirthDateFromSsn( '64040472086' );
+    const cd9 = new Date( 2004, 3, 24, 0, 0, 0, 0 );
+    expect( d9 ).toBeTruthy();
+    if ( d9 ) {
+      expect( d9.toDateString() ).toEqual( cd9.toDateString() );
+    }
+
+    const d10 = getBirthDateFromSsn( '47031999088' );
+    const cd10 = new Date( 2019, 2, 7,  0, 0, 0, 0 );
+    expect( d10 ).toBeTruthy();
+    if ( d10 ) {
+      expect( d10.toDateString() ).toEqual( cd10.toDateString() );
     }
   } );
 
