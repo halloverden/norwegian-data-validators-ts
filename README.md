@@ -3,7 +3,7 @@
 Typescript library for validating norwegian data:
 - Account numbers
 - Organization numbers
-- Social security numbers
+- Social security numbers (supports D-numbers)
 - KID numbers
 
 Also includes the following utility functions:
