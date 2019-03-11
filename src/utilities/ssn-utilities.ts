@@ -1,5 +1,5 @@
-import { validateSsn } from '@validators/ssn-validator';
-import { getMod11ControlDigit } from '@utilities/mod11-utilities';
+import { validateSsn } from '../validators/ssn-validator';
+import { getMod11ControlDigit } from './mod11-utilities';
 
 export const ssnFactors = [ 3, 7, 6, 1, 8, 9, 4, 5, 2 ];
 

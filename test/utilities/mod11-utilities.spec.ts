@@ -3,7 +3,7 @@ import {
   checkMod11ControlDigits,
   getMod11ControlDigit,
   getMod11ControlDigits
-} from '@utilities/mod11-utilities';
+} from '../../src/utilities/mod11-utilities';
 
 describe( 'Mod11Utilities: ', function () {
 

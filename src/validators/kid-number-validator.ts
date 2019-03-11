@@ -1,5 +1,5 @@
-import { getMod11ControlDigit } from '@utilities/mod11-utilities';
-import { getLuhnControlDigit } from '@utilities/luhn-utilities';
+import { getMod11ControlDigit } from '../utilities/mod11-utilities';
+import { getLuhnControlDigit } from '../utilities/luhn-utilities';
 
 export function validateKidNumber( kidNumber: string ) {
   const controlDigit = kidNumber.charAt( kidNumber.length - 1 );

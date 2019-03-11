@@ -1,4 +1,4 @@
-import { validateAccountNumber } from '@validators/account-number-validator';
+import { validateAccountNumber } from '../../src/validators/account-number-validator';
 
 describe( 'AccountNumberValidator: ', function () {
   it( 'validate() should fail if input does not follow valid account number pattern', function () {

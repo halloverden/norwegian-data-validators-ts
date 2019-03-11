@@ -1,4 +1,4 @@
-import { validateOrganizationNumber } from '@validators/organization-number-validator';
+import { validateOrganizationNumber } from '../../src/validators/organization-number-validator';
 
 describe( 'OrganizationNumberValidator: ', function () {
   it( 'validate() should fail if input does not follow the allowed organization number pattern', function () {
