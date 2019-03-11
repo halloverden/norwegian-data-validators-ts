@@ -3,7 +3,7 @@ import {
   checkLuhnControlDigits,
   getLuhnControlDigit,
   getLuhnControlDigits
-} from '@utilities/luhn-utilities';
+} from '../../src/utilities/luhn-utilities';
 
 describe( 'LuhnUtilities: ', function () {
   it( 'getLuhnControlDigit() should create correct control digit', function () {

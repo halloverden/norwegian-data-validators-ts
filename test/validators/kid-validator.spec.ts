@@ -1,4 +1,4 @@
-import { validateKidNumber } from '@validators/kid-number-validator';
+import { validateKidNumber } from '../../src/validators/kid-number-validator';
 
 describe( 'KidValidator: ', function () {
   it( 'validate() should fail if number is neither Mod11 nor Luhn "compatible"', function () {

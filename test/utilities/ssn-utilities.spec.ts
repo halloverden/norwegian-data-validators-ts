@@ -1,5 +1,5 @@
-import { getBirthDateFromSsn, getIndRangeFromYear, getSsnForDate, isDNumber } from '@utilities/ssn-utilities';
-import { validateSsn } from '@validators/ssn-validator';
+import { getBirthDateFromSsn, getIndRangeFromYear, getSsnForDate, isDNumber } from '../../src/utilities/ssn-utilities';
+import { validateSsn } from '../../src/validators/ssn-validator';
 
 describe( 'SsnUtilities', function () {
   it('getIndRangeFromYear() should return null for invalid year', function () {

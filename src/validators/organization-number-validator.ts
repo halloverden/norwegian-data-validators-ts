@@ -1,4 +1,4 @@
-import { getMod11ControlDigit } from '@utilities/mod11-utilities';
+import { getMod11ControlDigit } from '../utilities/mod11-utilities';
 
 export function validateOrganizationNumber( orgNumber: string ) {
   orgNumber = orgNumber.replace( new RegExp( / /g ), '' );
