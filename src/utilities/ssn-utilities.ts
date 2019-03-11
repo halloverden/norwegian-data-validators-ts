@@ -69,7 +69,7 @@ export function getBirthDateFromSsn( ssn: string ): Date | null {
   }
 
   const birthDate = ssn.substr( 0, 6 );
-  const d1 = birthDate.substr( 0, 1 );
+  const d1 = isDNumber(ssn) ? (parseInt(birthDate.substr( 0, 1 ), 10) - 4).toString(10) : birthDate.substr( 0, 1 );
   const d2 = birthDate.substr( 1, 1 );
   const m1 = birthDate.substr( 2, 1 );
   const m2 = birthDate.substr( 3, 1 );
