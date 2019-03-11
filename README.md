@@ -12,7 +12,7 @@ Also includes the following utility functions:
 - Generate one or more Mod11 control digits for given number
 - Check that a given number has a valid Mod11 control digit
 - Get valid individual number range for a Norwegian ssn with the given birth year
-- Get the correct birth date for a given Norwegian ssn
+- Get the correct birth date for a given Norwegian ssn or D-number
 - Generate a random valid Norwegian ssn or D-number for a given date
 - Check if a given Norwegian ssn is a D-number
 
