@@ -1,7 +1,16 @@
 {
   "name": "@halloverden/norwegian-data-validators-ts",
-  "version": "2.2.0",
-  "description": "Typescript library for validating norwegian data",
+  "version": "2.3.0",
+  "description": "Typescript library for validating norwegian data. Also includes some utility functions.",
+  "keywords": [
+    "account-number",
+    "kid-number",
+    "norwegian",
+    "organization-number",
+    "social-security-number",
+    "ssn",
+    "validation"
+  ],
   "main": "./dist/index.min.js",
   "types": "./dist/index.d.ts",
   "scripts": {
