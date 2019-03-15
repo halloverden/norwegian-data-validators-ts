@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:halloverden/norwegian-data-validators-ts.git"
+    "url": "https://github.com/halloverden/norwegian-data-validators-ts.git"
   },
   "author": "Erich Json Fosse <erich@halloverden.no>",
   "license": "ISC",
