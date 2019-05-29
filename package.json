@@ -1,6 +1,6 @@
 {
   "name": "@halloverden/norwegian-data-validators-ts",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Typescript library for validating norwegian data. Also includes some utility functions.",
   "keywords": [
     "account-number",
@@ -53,7 +53,7 @@
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-typescript": "^4.0.0",
     "karma-webpack": "^4.0.0-rc.6",
-    "nyc": "^13.3.0",
+    "nyc": "^14.1.1",
     "path": "^0.12.7",
     "rimraf": "^2.6.3",
     "ts-node": "~8.0.2",
