@@ -14,7 +14,7 @@ describe( 'AccountNumberValidator: ', function () {
   } );
 
   it( 'validate() should succeed if input is a valid account number', function () {
-    expect( validateAccountNumber( '73256545370' ) ).toEqual( false );
-    expect( validateAccountNumber( '7325.65.45370' ) ).toEqual( false );
+    expect( validateAccountNumber( '73251223650' ) ).toEqual( true );
+    expect( validateAccountNumber( '7325.12.23650' ) ).toEqual( true );
   } );
 } );
