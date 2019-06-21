@@ -1,6 +1,6 @@
 {
   "name": "@halloverden/norwegian-data-validators-ts",
-  "version": "2.4.3",
+  "version": "2.4.4",
   "description": "Typescript library for validating norwegian data. Also includes some utility functions.",
   "keywords": [
     "account-number",
