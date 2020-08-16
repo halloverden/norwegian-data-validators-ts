@@ -1,6 +1,6 @@
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const path = require('path');
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const { TsconfigPathsPlugin } = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
   output: {
